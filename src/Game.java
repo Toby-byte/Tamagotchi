@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,7 +17,7 @@ public class Game {
     public Lion getLion() {
         System.out.println("Hello and welcome Snail and lion tamagotshi simulator!");
         System.out.println("\nnow, please give a name to the lion");
-        String lionName = this.scanner.nextLine();
+        String lionName = this.scanner.nextLine().toLowerCase(Locale.ROOT);
         System.out.println("how old is "+lionName+"?");
         // Denne løsning er brugt for at undgå scannerbug, scanner.nextInt er problematisk
         String lionAge = this.scanner.nextLine();
@@ -29,7 +30,7 @@ public class Game {
 
     public Snail getSnail() {
         System.out.println("\nNow, please give a name to the snail");
-        String snailName = this.scanner.nextLine();
+        String snailName = this.scanner.nextLine().toLowerCase(Locale.ROOT);
         System.out.println("how old is "+snailName+"?");
         // Denne løsning er brugt for at undgå scannerbug, scanner.nextInt er problematisk
         String snailAge = this.scanner.nextLine();
@@ -50,7 +51,7 @@ public class Game {
         Snail snail = game.getSnail();
 
         System.out.println("do you want to play with "+lion.name+" or "+snail.name+"?");
-        String userChoice = scanner.nextLine();
+        String userChoice = scanner.nextLine().toLowerCase(Locale.ROOT);
         if (userChoice.equals(lion.name)) {
             lion.drawLion();
             // Når man laver et while loop, for at komme ud af det enten at bruge return
