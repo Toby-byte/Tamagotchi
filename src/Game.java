@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Game {
     // For at få en global scanner kan man lave den public.
-    // Derefter bruge syntaksen "this.scanner" når man skal bruge den.
+    // Derefter bruge syntaksen "this.scanner" når man skal bruge den .
     public Scanner scanner = new Scanner(System.in);
 
     public int getRandomNumber(int max, int min){
