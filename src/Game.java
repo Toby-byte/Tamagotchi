@@ -11,7 +11,6 @@ public class Game {
         Random rand = new Random();
         int randomNumber = rand.nextInt(max - min + 1) + min;
         return randomNumber;
-
     }
 
     public Lion getLion() {

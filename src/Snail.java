@@ -22,8 +22,4 @@ public class Snail extends Tamagotshi{
         System.out.println("     \\      \\           /___");
         System.out.println("      \\______\\_________/____\"-_");
     }
-
-    public String getSnailName() {
-        return this.name;
-    }
 }

@@ -20,14 +20,13 @@ public void feed() { System.out.println("Tamagotshi has been fed food");
     }
 
 public void sleep() {
-    Random rand = new Random();
-    // nemmere måde at lave et vilkårligt tal
-    //https://www.geeksforgeeks.org/generating-random-numbers-in-java/
-    int sleep = rand.nextInt(25);
+    int sleep = getRandomNumber(25,1);
         System.out.println("Tamagotshi has slept for "+sleep+" hours");
 }
 
 public int getRandomNumber(int max, int min){
+    // Nemmere måde at lave et vilkårligt tal
+    // https://www.geeksforgeeks.org/generating-random-numbers-in-java/
     Random rand = new Random();
     int randomNumber = rand.nextInt(max - min + 1) + min;
     return randomNumber;
