@@ -53,8 +53,7 @@ public class Game {
         String userChoice = scanner.nextLine().toLowerCase(Locale.ROOT);
         if (userChoice.equals(lion.name)) {
             lion.drawLion();
-            // Når man laver et while loop, for at komme ud af det enten at bruge return
-            // eller lave en variabel uden for while som kan ændre i sit while loop
+
             boolean run = true;
             while(run) {
                 System.out.println("do you want " + lion.name + " to play, sleep, feed or race against "+snail.name+"? choose 1, 2, 3 or 4");
@@ -70,6 +69,8 @@ public class Game {
                 }else if (userAnswer.equals("4")) {
                     lion.race();
                 } else if (userAnswer.equals("exit")) {
+                    // Når man laver et while loop, for at komme ud af det enten at bruge return
+                    // eller lave en variabel uden for while som kan ændre i sit while loop
                     run = false;
                 }
             }
